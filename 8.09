@@ -1,0 +1,6 @@
+with open("emplo.csv",'w') as f:
+    columns=','.join(d.keys()) +'\n'
+    f.write(columns)
+    values=','.join(map(str,d.values())) + '\n'
+    f.write(values)
+    print(columns, values)
