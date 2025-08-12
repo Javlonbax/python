@@ -30,3 +30,9 @@ False
 None        ## ----- noma'lum
 bool("")   # faqat bo`mbosh bo`sa False qaytaradi
 bool(-1)    # noldan boshqa har qanday holatda True qaytaradi
+
+city=input("Qaysi shahar ")
+if city.lower()=="tashkent":
+    print("siz olindiz")
+else:
+    print("toshini ter")
