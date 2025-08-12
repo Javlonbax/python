@@ -1,1 +1,32 @@
-## 
+# mutable       - - - -list, dict
+# immutable   - --- str, tuple,int,float
+# ordered  --- list, tuple, str
+# unordered    - ---- dict, set
+s={1,2,3,'a','asdd'}   ##  ----  set shunaqa bo`ladi`
+# rules for set creation
+# rule1: har bir element o`zgarmas bo`lishi kerak
+# rule2: har bir element bir marta ishlatilishi mumkin
+# rule3: --unordered --- indexing va slicing set da ishlatilmaydi
+s={1,2,3,1}
+print(s) 
+s.add(45)  # element qo`shadi`
+#s.clear
+s.discard(45)  ## ko`rsatilgan elementti o`chiradi
+s2=s.copy()
+s.pop()       ###  birinchisidan boshlab o`chiradi`
+ls=['a','v','s','a']
+set(ls)
+s1={1,2,3,4}
+s2={3,4,5,6}
+s1.intersection(s2)  
+s1 & s2
+s1.difference(s2)
+s1.union(s2)
+s1 | s2
+s1 | s2 - s1-s2
+## boolean 
+True
+False
+None        ## ----- noma'lum
+bool("")   # faqat bo`mbosh bo`sa False qaytaradi
+bool(-1)    # noldan boshqa har qanday holatda True qaytaradi
