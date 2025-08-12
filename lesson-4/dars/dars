@@ -36,3 +36,4 @@ if city.lower()=="tashkent":
     print("siz olindiz")
 else:
     print("toshini ter")
+                          ## uyga vazifa kabisa yilini aniqlash kerak
