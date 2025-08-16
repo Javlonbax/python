@@ -1,1 +1,48 @@
+## funksiya
+id("hello")
+## built-in   ---- pitonni o`zida mavjud fuksiyalar
+## user-defined ------ foydalanuvchi tomonidan yaratiladi
+funksiya nomi --- snake case bo`lishi kerak
+args - positional arguments
+kwargs  - keyword arguments
 
+def nam(a='botir',b='sardor'):
+   print(f"man {a} san {b}")
+nam("javlon")  - agar argument bitta berilsa birinchi argumentga oladi
+
+def add_numbers(*numbers):          ### * zvezdochka qo`yilsa nechta raqm bo`sayam oladi
+    print(sum(numbers))
+add_numbers(10,15,45,45,47,48)
+
+polidrom so`zlar chapdan o`ngga va o`ngdan chapga o`qilganda bir hil bo`ladi  misol: kiyik, amma
+
+def replace_value(name):                        ## txt ga o`zgartirish kiritadi
+    with open ('example.txt') as f:
+        data=f.read()
+        data=data.replace('Dilshod',name)
+        return data
+new_data=replace_value('Mamur')
+with open('example.txt','w') as f:
+    f.write(new_data)
+
+ls=['blue','red','blue','yellow','green','blue','green']
+d={}
+for word in ls:
+    if word not in d.keys():
+        d[word]=1
+    else:
+        d[word]=d[word]+1
+d
+
+def factorial(num):
+    if num in [0,1]:
+        return 1
+    else: return num*factorial(num-1)
+factorial(5)
+
+kibanachi sonlari  
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34 ....
+uyga vazifa berilgan sondan kichkina kebanachi sonlarini topish funksiyasini yozish kerak
+
+a= lambda x:x+1    funksiya yaratishni yana bir usuli
+a(50) 
