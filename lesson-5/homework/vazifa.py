@@ -23,3 +23,15 @@ if not isinstance(n, int):
 print(n_chek(n))
 
 ## 3
+a=7
+b=17
+ls=[]
+def fin(a,b):
+    if a%2==0:
+        ls.append(a)
+    a=a+1
+    if a<b:
+        fin(a,b)
+    return ls
+print(fin(a,b))
+
