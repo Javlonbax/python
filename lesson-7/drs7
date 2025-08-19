@@ -80,3 +80,15 @@ print(data2)
 with open('students.txt','r') as f:
     data=f.readlines()      barcha qatorlani oladi
 print(data)
+
+with open('uzbeks.txt','w') as f:
+    data=f.write('ala ala ala ala')         yangittan yozadi yozilgan hammasini o`chirib
+
+with open('uzbeks.txt','a') as f:                        'a' yozilsa davomidan yozuv qo`shib ketadi
+    data=f.write('\n ala ala ala ala')
+
+with open('uzbeks.txt','a') as f:
+    data=f.write('\trrr')                                   \ belgisi cherez probel yozadi
+
+Akmal,Anvar,Malika,Josh,John,Akmal
+Malika,Jasur,
