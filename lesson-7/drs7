@@ -1,8 +1,8 @@
 Exception handling and file hendling
 exception handling - hatolarni oldini olish
  - TypeError - string va integer qo`shilgan holda chiqadi
- - ValueError
- - IdentationError  - chapdan kak polojeno surilmagan bo`lsa
+ - ValueError - misol int('hello')
+ - IndentationError  - chapdan kak polojeno surilmagan bo`lsa
  - NameError - o`zgaruvchini topomasa
  - AttributeError - misol split() list bilan ishlamiydi
  - ModulNotFoundError - kutubhonadan import qiganda kutubxonadigi yo`q modul import qilinsa
@@ -10,3 +10,73 @@ exception handling - hatolarni oldini olish
  - FileNotFoundError - faylni topomasa
  - SyntaxError - masalan for loop da ikki nuqta qo`yilmasa
  - KeyboardInterrupt - majburan klavishdan programma to`xtatilsa
+
+try:
+    int('husan')
+except (ValueError,NameError):
+    print('Smth is wrong')
+
+try:
+    int(husan)
+    int('husan')
+except ValueError:
+    print("ko`rsatkish noto`g`ri")
+except NameError:
+    print('name xato')
+
+try:
+    int(husan)
+    int('husan')
+except Exception:
+    pass
+
+try:
+    name='alex'
+    name+20
+    print('Hello uzbekiston')
+except TypeError:
+    print('name xato')
+else:                        try ichida muammo bo`lmasa, else ichidigi ham ishliydi
+    print('bir balo')
+
+try:
+    name='alex'
+    name+20
+    print('Hello uzbekiston')
+except TypeError:
+    print('name xato')
+else:
+    print('bir balo')
+finally:                           try tugagandan keyin lyubom sluchay chiqadi
+    print('to`y tugadi')
+
+with open('misol.txt','r') as f:
+    data=f.read(10)                            read qavsini ichiga son yozilsa o`shancha harffi oladi
+data
+
+with open('misol.txt','r') as f:
+    data=f.read(12)
+    data2=f.read()             birirnchi dataga olingan joydan boshlab o`qiydi
+data
+data2
+
+with open(r"C:\Users\user\Desktop\misol.txt",'r') as f:            to`liq put qo`yilsa qo`shtirno ichidagi put nomidan oldin r qo`yish kere yoki sleshlani ikkitadan yozish kere
+    data=f.read()
+data
+
+with open('misol.txt','r') as f:
+    data=f.read(12)
+    f.seek(12)                        kursorri suradi, o`sha joydan o`qiydi
+    data2=f.read(12)
+print(data)
+print(data2)
+
+with open('students.txt','r') as f:
+    data=f.readline()                       faqat 1 qatorni oladi
+    data2=f.readline()                      faqat 2-qatorni oladi 
+print(data)
+print(data2)
+
+with open('students.txt','r') as f:
+    data=f.readlines()      barcha qatorlani oladi
+print(data)
