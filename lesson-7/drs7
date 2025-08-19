@@ -1,1 +1,12 @@
-
+Exception handling and file hendling
+exception handling - hatolarni oldini olish
+ - TypeError - string va integer qo`shilgan holda chiqadi
+ - ValueError
+ - IdentationError  - chapdan kak polojeno surilmagan bo`lsa
+ - NameError - o`zgaruvchini topomasa
+ - AttributeError - misol split() list bilan ishlamiydi
+ - ModulNotFoundError - kutubhonadan import qiganda kutubxonadigi yo`q modul import qilinsa
+ - ZeroDivisionError - nolga bo`lmoqchi bo`sa
+ - FileNotFoundError - faylni topomasa
+ - SyntaxError - masalan for loop da ikki nuqta qo`yilmasa
+ - KeyboardInterrupt - majburan klavishdan programma to`xtatilsa
