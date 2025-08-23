@@ -71,3 +71,21 @@ try:
 except ArithmeticError:
     print('Xato')
 # 9. Write a Python program that opens a file and handles a UnicodeDecodeError exception if there is an encoding issue.
+try:
+    with open('D:\jj.txt','r',encoding='utf-16') as f:
+        print(f.read())
+except UnicodeDecodeError:
+    print('Xato')
+
+# 10. Write a Python program that executes a list operation and handles an AttributeError exception if the attribute does not exist.
+try:
+    class Dog:
+        def bark(self):
+            print("Woof!")
+    dog = Dog()
+    dog.meow()
+except AttributeError:
+    print('Xato')
+
+   ####    File Input/Output Exercises
+1. Write a Python program to read an entire text file.
