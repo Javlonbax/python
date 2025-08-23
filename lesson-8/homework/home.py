@@ -88,4 +88,15 @@ except AttributeError:
     print('Xato')
 
    ####    File Input/Output Exercises
-1. Write a Python program to read an entire text file.
+#1. Write a Python program to read an entire text file.
+with open ('D:\jj.txt','r') as f:
+    print(f.read())
+
+#2. Write a Python program to read first n lines of a file.
+with open ('D:\jj.txt','r') as f:
+    print(f.readline())
+# 3. Write a Python program to append text to a file and display the text.
+with open ('D:\jj.txt','a') as f:
+    print(f.write('\n 999'))
+with open ('D:\jj.txt','r') as f:
+    print(f.read())
