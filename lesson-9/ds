@@ -1,0 +1,73 @@
+ class Student:
+     pass
+ student1=Student()
+ student1.name='Azamat'
+ student1.age=25
+ student1.email='azamat1015@gmail.com'
+ print(student1.email)
+
+class Student:                                             ## klas nomi kotta harp bilan boshlanishi tavsiya etilgan
+    def __init__(self,name,age,email):
+        self.name=name
+        self.age=age
+        self.email=email
+s1=Student('Azamat',24,'aza@gmail.com')
+s2=Student('Baxa',27,'baxa@gmail.com')
+print(s1.name)
+
+class Employee:
+    salary=1000
+    def __init__(self,name,age,salary):
+        self.age=age
+        self.name=name
+        self.salary=salary
+employee1=Employee('Bax',41,2000)
+print(Employee.salary)                            - 1000 chiqdi
+print(employee1.salary)                           - 2000 chiqadi
+
+class Employee:
+    bonus=1000                         -    class variable
+    def __init__(self,name,age,salary):
+        self.age=age                   - instanse variable
+        self.name=name
+        self.salary=salary+self.bonus
+employee1=Employee('Bax',41,2000)
+print(Employee.bonus)
+print(employee1.salary)
+
+class Point:
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+    def __str__(self):                            -    print qilib beradi, klassi ichidagi print
+        return f"Point {self.x} {self.y}"
+p1=Point(4,3)
+print(p1)
+          ###########################
+class Point:
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+    def __str__(self):
+        return f"Point {self.x} {self.y}"
+    def reverse(self):
+        self.x=-1*self.x
+        self.y=-1*self.y
+    def reset(self):
+        self.x=0
+        self.y=0
+p1=Point(4,3)
+p1.reverse()                          - klassi ichidigi defni yurgazish uchun shunaqa yoziladi
+p1.reset()
+print(p1)
+
+class Point:
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+    def __str__(self):
+        return f"Point {self.x} {self.y}"
+    def aniqla(self):
+        return (self.x**2+self.y**2)**(1/2)
+p1=Point(4,3)
+print(int(p1.aniqla()))
