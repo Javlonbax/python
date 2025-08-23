@@ -100,3 +100,19 @@ with open ('D:\jj.txt','a') as f:
     print(f.write('\n 999'))
 with open ('D:\jj.txt','r') as f:
     print(f.read())
+
+# 4. Write a Python program to read last n lines of a file.
+def rd(n):
+    with open ('D:/rbt.txt','r') as f:
+        for t in f.readlines()[-n:]:
+            print(t)
+rd(2)
+
+# 5. Write a Python program to read a file line by line and store it into a list.
+def rd():
+    ls=[]
+    with open ('D:/rbt.txt','r') as f:
+        for t in f.readlines():
+            ls.append(t)
+    print(ls)
+rd()
