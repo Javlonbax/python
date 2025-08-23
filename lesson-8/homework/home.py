@@ -114,5 +114,87 @@ def rd():
     with open ('D:/rbt.txt','r') as f:
         for t in f.readlines():
             ls.append(t)
-    print(ls)
-rd()
+    return ls
+print(rd())
+
+# 6. Write a Python program to read a file line by line and store it into a variable.
+def rd():
+    dr=""
+    with open ('D:/rbt.txt','r') as f:
+        for t in f.readlines():
+            dr+=t
+    return dr
+print(rd())
+
+# 7.Write a Python program to read a file line by line and store it into an array.
+import array
+def rd():
+    with open ('D:/rbt.txt','r') as f:
+        a=0
+        for d in f.readlines():
+            if a==0:
+                da=array.array('u',d)
+            else:
+                da.extend(d)
+            a+=1
+    return da
+print(rd())
+
+# 8. Write a Python program to find the longest words.
+ls=["ss","ssss","s","sssssss"]
+lngst=0  
+for l in ls:
+    if len(l)>lngst:
+        lngst=len(l)
+        wrd=l
+print(l)
+
+# 9. Write a Python program to count the number of lines in a text file.
+sn=0
+with open ('D:/rbt.txt','r') as f:
+    for n in f.readlines():
+        sn+=1
+print(sn)
+
+#10. Write a Python program to count the frequency of words in a file.
+sn={}
+with open ('D:/rbt.txt','r') as f:
+    for n in f.readlines():
+        for nn in n.split():
+            print(nn)
+            if nn not in sn:
+                sn[nn]=1
+            else:
+                sn[nn]+=1
+print(sn)
+
+# 11. Write a Python program to get the file size of a plain file.
+import os
+print(os.stat('D:/rbt.txt').st_size)
+
+# 12. Write a Python program to write a list to a file.
+ls=[1,2,3]
+with open ('D:/mis.txt','w') as f:
+    f.write(str(ls))
+
+# 13. Write a Python program to copy the contents of a file to another file.
+with open ('D:/mis.txt','r') as f, open ('D:/rbt.txt','a') as f2:
+    for l in f:
+        f2.write(l)
+
+# 14. Write a Python program to combine each line from the first file with the corresponding line in the second file.
+with open ('D:/mis.txt') as f, open ('D:/rbt.txt') as f2:
+    for l,l2 in zip(f,f2):
+        print(l+l2)
+# 15. Write a Python program to read a random line from a file.
+import random
+def random_line(fname):
+    lines = open(fname).read().splitlines()
+    return random.choice(lines)
+print(random_line('D:/rbt.txt'))
+# 16. Write a Python program to assess if a file is closed or not.
+f = open('D:/rbt.txt','r')
+print(f.closed)
+f.close()
+print(f.closed)
+# 17. Write a Python program to remove newline characters from a file.
