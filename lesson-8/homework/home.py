@@ -13,7 +13,6 @@ def calc(n):
     return 1/int(n)
   except ValueError:
     return 'Raqam kirit!'
-
 print(calc(input('Son kiriting '))) 
 
 # 3 Write a Python program that opens a file and handles a FileNotFoundError exception if the file does not exist.
@@ -95,6 +94,7 @@ with open ('D:\jj.txt','r') as f:
 #2. Write a Python program to read first n lines of a file.
 with open ('D:\jj.txt','r') as f:
     print(f.readline())
+
 # 3. Write a Python program to append text to a file and display the text.
 with open ('D:\jj.txt','a') as f:
     print(f.write('\n 999'))
@@ -161,7 +161,6 @@ sn={}
 with open ('D:/rbt.txt','r') as f:
     for n in f.readlines():
         for nn in n.split():
-            print(nn)
             if nn not in sn:
                 sn[nn]=1
             else:
@@ -198,3 +197,37 @@ print(f.closed)
 f.close()
 print(f.closed)
 # 17. Write a Python program to remove newline characters from a file.
+def nwln(file):
+    newfile=open(file).readlines()
+    return [x.rstrip('\n') for x in newfile]
+print(nwln('D:/rbt.txt'))
+
+#18. Write a Python program that takes a text file as input and returns the number of words in a given text file.
+def nwln(file):
+    newfile=open(file).read()
+    return len(newfile.replace(',',' ').split())
+print(nwln('D:/rbt.txt'))
+
+#19. Write a Python program to extract characters from various text files and put them into a list.
+import glob
+nlst=[]
+for n in glob.glob('D:\**.txt'):
+    nlst.append(open(n).read())
+print(nlst)
+
+#20. Write a Python program to generate 26 text files named A.txt, B.txt, and so on up to Z.txt.
+import string
+for f in string.ascii_uppercase:
+    with open (f'D:/e/{f}.txt','w') as f:
+        f.write('')
+
+# 21. Write a Python program to create a file where all letters of the English alphabet are listed with a specified number of letters on each line.
+import string
+def f_copy(a)
+    strin=string.ascii_uppercase
+    with open ('D:ktk.txt','a') as f:
+        for let in range(int(len(strin)/a+1)):
+            f.write(f'{strin[let*a:let*a+a]}\n')
+f_copy(3) 
+
+
