@@ -24,3 +24,9 @@ print(tdy-start)
 print(tdy.timestamp())         timestamp dan boshlab o`tgan sekundlar soni
 
 timedel1=timedelta(weeks=2,days=3,hours=6)      vaqt oralig`i
+
+tdy=datetime.now()
+tdy_str=tdy.strftime("%d %B %Y")    sanani tekstga o`tkazishga
+print(tdy_str)
+
+san=datetime.strptime(tdy_str,"%d %B %Y")       tekstdan sanaga o`tkazadi
