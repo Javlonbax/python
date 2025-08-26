@@ -30,3 +30,19 @@ tdy_str=tdy.strftime("%d %B %Y")    sanani tekstga o`tkazishga
 print(tdy_str)
 
 san=datetime.strptime(tdy_str,"%d %B %Y")       tekstdan sanaga o`tkazadi
+
+import pytz
+local = datetime.now()
+print("Tashkent",local)
+
+tz_London=pytz.timezone("Europe/London")            Londonni vaqtini ko`rsatadi
+London=datetime.now(tz_London)
+print("London: ",London)
+
+tz_new_york=pytz.timezone("America/New_york")
+NewYork=datetime.now(tz_new_york)
+print("New York: ",NewYork)
+
+tz_japan=pytz.timezone("Asia/Tokyo")
+japan=datetime.now(tz_japan)
+print("Japan: ",japan)
