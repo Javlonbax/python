@@ -1,1 +1,6 @@
+message="men pitonni o`rganyapman"
+if __name__=="__main__":                  boshqa fayldan chaqirilsa tegidigi komanda u fayldan ishlamiydi
+    print(message) 
 
+__name__ qaysi piton faylda ishlavotgan busak usha faylli nomiga teng bo`ladi.
+__main__ kod yozilip turgan faylni nomi
