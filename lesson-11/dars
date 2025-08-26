@@ -4,3 +4,14 @@ if __name__=="__main__":                  boshqa fayldan chaqirilsa tegidigi kom
 
 __name__ qaysi piton faylda ishlavotgan busak usha faylli nomiga teng bo`ladi.
 __main__ kod yozilip turgan faylni nomi
+
+from datetime import date, time, datetime, timezone, timedelta
+t=time()
+sana=date(2025,8,30)         sanani ko`rsatadi
+bugun=date.today()           bugungi sanani ko`rsatadi
+print(bugun) 
+
+start=datetime.fromtimestamp(0)    pitonda vaqt boshlangan vaqt
+print(start)
+
+1970-01-01 05:00:00   shu chiqadi
