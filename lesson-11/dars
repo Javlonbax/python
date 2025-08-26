@@ -15,3 +15,12 @@ start=datetime.fromtimestamp(0)    pitonda vaqt boshlangan vaqt
 print(start)
 
 1970-01-01 05:00:00   shu chiqadi
+
+start=datetime.fromtimestamp(0)
+tdy=datetime.now()
+print(tdy-start)
+20326 days, 15:48:05.871472          shu chiqadi
+
+print(tdy.timestamp())         timestamp dan boshlab o`tgan sekundlar soni
+
+timedel1=timedelta(weeks=2,days=3,hours=6)      vaqt oralig`i
